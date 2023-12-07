@@ -1,16 +1,28 @@
-# Repository for 2022 ESW - RPi
+# Repository for 2023 ESW - RPi
 
-## setup RPi SPI Enable
-In RPi Terminal
-```
-sudo raspi-config
-Interface .. -> SPI -> Enable
-```
+# 양치기의 모험
 
-## Requirement Library
-```
-sudo pip3 install adafruit-circuitpython-rgb-display
+이 게임은 `Raspberry Pi 4`에서 실행되며, `Adafruit 1.3" Color TFT Bonnet`의 조이스틱, 버튼, LCD를 사용합니다.
+게임의 목표는 양치기를 조종해 양을 늑대로부터 지키고 목적지까지 안전하게 인도하는 것입니다.
 
-sudo apt-get install fonts-dejavu
-```
-& extra you need
+## 시스템 요구사항
+
+- **플랫폼**: Raspberry Pi 4
+- **하드웨어**: Adafruit 1.3" Color TFT Bonnet (조이스틱, 버튼, LCD 포함)
+
+## 개요
+
+- **목표**: 양치기가 양을 목적지까지 이끌기.
+- **위험**: 늑대가 양에게 다가오면 게임 오버.
+- **상호작용**: 양치기가 가까이 가면 양은 반대 방향으로 이동.
+
+## 게임 방식
+
+- **양치기 조작**: Adafruit 1.3" Color TFT Bonnet의 조이스틱과 버튼을 이용해 양치기를 움직여 양을 인도.
+- **양의 반응**: 양치기가 접근하면 양은 자동으로 도망.
+- **충돌 효과**: 양이 늑대와 부딪히면 반동 효과와 함께 게임 종료. 이때 실제 물리 세계에서 물체가 충돌 후에 점점 속도를 잃는 것과 유사하게 가속도 개념을 포함한 반동 효과 작용.
+
+## 플레이 방법
+
+1. 조이스틱과 버튼을 이용해 양치기를 조종해 양을 움직이기
+2. 늑대를 피해 양을 안전하게 목적지까지 인도하기
